@@ -30,7 +30,7 @@
 	url = https://github.com/ucb-bar/berkeley-hardfloat.git
 [submodule "generators/ibex"]
 	path = generators/ibex
-	url = https://github.com/cad-polito-it/ibex-wrapper.git
+	url = https://github.com/NicolaGiardino/ibex-wrapper.git
 [submodule "generators/icenet"]
 	path = generators/icenet
 	url = https://github.com/firesim/icenet.git
