@@ -1,0 +1,28 @@
+fsim.inputs:
+
+  # Optional execution flags for the fault simulator
+  optional_elaboration_flags: ["+vcs+fsdbon"]
+
+
+  # Determine the weights of all the parameters in the test and fault coverage
+  weights: [
+    {fault_class: "PT", weight: "1.0"}
+  ]
+
+  test_coverage: "(DD * DD_weight + DT * DT_weight + DE * DE_weight + DF * DF_weight + PD * PD_weight + PT * PT_weight)/(Total)"
+  fault_coverage: "(DD * DD_weight + DT * DT_weight + DE * DE_weight + DF * DF_weight + PD * PD_weight + PT * PT_weight)/(Total + UB + UI + UR + UT + UU + UO)"
+ 
+  # Faults on the whole lockstepped core: main core, shadow core, checker, shared RF.
+  # Split per sub-instance (u_ibex_core / u_shadow_core / checker) when post-processing.
+  fault_locations: [
+    {location: "ChipTop.system.tile_prci_domain.element_reset_domain_ibex_lockstep_tile.core.**",
+              fault_type: "0,1", type_of_fault_location: "PORT", exclude: False},
+  ]
+ 
+  # Strobe the ports of the core wrapper: functional outputs (bus requests)
+  # AND the safety outputs (alert_major_o / alert_minor_o).
+  # alert_minor_o is constant 0 in this Ibex version.
+  strobe_modules: [
+    "TestDriver.testHarness.chiptop0.system.tile_prci_domain.element_reset_domain_ibex_lockstep_tile.core",
+  ]
+ 

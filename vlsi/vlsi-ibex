@@ -4,7 +4,7 @@
 
 import os
 
-from hammer.vlsi import CLIDriver, HammerTool, HammerToolHookAction
+from hammer.vlsi import CLIDriver, HammerTool, HammerToolHookAction, HammerSynthesisTool
 from hammer.tech.specialcells import CellType
 
 
@@ -95,12 +95,13 @@ class ExampleDriver(CLIDriver):
     def get_extra_synthesis_hooks(self) -> List[HammerToolHookAction]:
         extra_hooks = [
             HammerTool.make_post_insertion_hook("init_environment", add_options),
-            HammerTool.make_post_insertion_hook("elaborate_design", add_black_boxes),
-            HammerTool.make_pre_insertion_hook("configure_dft", connect_clk_en_reg),
-            HammerTool.make_pre_insertion_hook("configure_dft", connect_black_box_signals),
-            HammerTool.make_post_insertion_hook("configure_dft", insert_internal_memory_collar)
-
+            HammerTool.make_post_insertion_hook("elaborate_design", add_black_boxes)
         ]
+        
+        if "configure_dft" in HammerTool.get_tool_hooks(HammerSynthesisTool):
+            extra_hooks.append(HammerTool.make_pre_insertion_hook("configure_dft", connect_clk_en_reg))
+            extra_hooks.append(HammerTool.make_pre_insertion_hook("configure_dft", connect_black_box_signals))
+            extra_hooks.append(HammerTool.make_post_insertion_hook("configure_dft", insert_internal_memory_collar))
         return extra_hooks
 
     def get_extra_atpg_hooks(self) -> List[HammerToolHookAction]:
