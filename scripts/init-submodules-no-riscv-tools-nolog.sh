@@ -256,7 +256,6 @@ cd "$RDIR"
 
     if [[ "$ENABLE_RADIANCE" -eq 1 ]] ; then
 	git submodule update --init --recursive generators/radiance || exit 1
-    git submodule update --init generators/gemmini || exit 1
     fi
 
     if [[ "$ENABLE_COMPRESSACC" -eq 1 ]] ; then
@@ -293,6 +292,8 @@ cd "$RDIR"
     if [[ "$ENABLE_GEMMINI" -eq 1 ]] ; then
         submodule_name="generators/gemmini"
         git submodule update --init generators/gemmini || exit 1
+        git -C generators/gemmini/ submodule update --init --recursive mxgen || exit 1
+        # git -C generators/gemmini/ submodule update --init --recursive npu-exploration || exit 1 Heavy repositories
         git -C generators/gemmini/ submodule update --init --recursive software/gemmini-rocc-tests || exit 1
     fi
 

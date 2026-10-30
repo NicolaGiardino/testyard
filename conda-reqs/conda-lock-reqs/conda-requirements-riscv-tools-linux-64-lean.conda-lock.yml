@@ -5,11 +5,11 @@
 # available, unless you explicitly update the lock file.
 #
 # Install this environment as "YOURENV" with:
-#     conda-lock install -n YOURENV conda-requirements-riscv-tools-linux-64-lean.conda-lock.yml.d7iIyD.conda-lock.yml
+#     conda-lock install -n YOURENV conda-requirements-riscv-tools-linux-64-lean.conda-lock.yml.u5bVnh.conda-lock.yml
 # To update a single package to the latest version compatible with the version constraints in the source:
-#     conda-lock lock  --lockfile conda-requirements-riscv-tools-linux-64-lean.conda-lock.yml.d7iIyD.conda-lock.yml --update PACKAGE
+#     conda-lock lock  --lockfile conda-requirements-riscv-tools-linux-64-lean.conda-lock.yml.u5bVnh.conda-lock.yml --update PACKAGE
 # To re-solve the entire environment, e.g. after changing a version constraint in the source file:
-#     conda-lock -f ../chipyard-base.yaml -f ../docs.yaml -f ../riscv-tools.yaml --lockfile conda-requirements-riscv-tools-linux-64-lean.conda-lock.yml.d7iIyD.conda-lock.yml
+#     conda-lock -f ../chipyard-base.yaml -f ../docs.yaml -f ../riscv-tools.yaml --lockfile conda-requirements-riscv-tools-linux-64-lean.conda-lock.yml.u5bVnh.conda-lock.yml
 version: 1
 metadata:
   content_hash:
@@ -224,26 +224,26 @@ package:
     __glibc: '>=2.17,<3.0.a0'
     fontconfig: '>=2.18.3,<3.0a0'
     fonts-conda-ecosystem: ''
-    icu: '>=78.3,<79.0a0'
-    libexpat: '>=2.8.1,<3.0a0'
+    icu: '>=79.1,<80.0a0'
+    libexpat: '>=2.9.0,<3.0a0'
     libfreetype: '>=2.14.3'
     libfreetype6: '>=2.14.3'
     libgcc: '>=15'
     libglib: '>=2.90.0,<3.0a0'
-    libpng: '>=1.6.58,<1.7.0a0'
+    libpng: '>=1.6.59,<1.7.0a0'
     libstdcxx: '>=15'
     libxcb: '>=1.17.0,<2.0a0'
     libzlib: '>=1.3.2,<2.0a0'
     pixman: '>=0.46.4,<1.0a0'
     xorg-libice: '>=1.1.2,<2.0a0'
     xorg-libsm: '>=1.2.6,<2.0a0'
-    xorg-libx11: '>=1.8.13,<2.0a0'
+    xorg-libx11: '>=1.8.14,<2.0a0'
     xorg-libxext: '>=1.3.7,<2.0a0'
-    xorg-libxrender: '>=0.9.12,<0.10.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/cairo-1.18.6-h3c89d7e_0.conda
+    xorg-libxrender: '>=0.9.13,<0.10.0a0'
+  url: https://conda.anaconda.org/conda-forge/linux-64/cairo-1.18.6-h9f5ca07_1.conda
   hash:
-    md5: 7920701f9abcb488411495742cf365a7
-    sha256: 5d0efc6f9981468aca72897460d9b2d17b74dff72787f20a9d2330e214064515
+    md5: a0338c7da191449811d9697cd6f9df86
+    sha256: 8584abe922b7802768f8a80cc9d8700cc6580212d2e676881109eea113561cfd
   category: main
   optional: false
 - name: certifi
@@ -675,10 +675,10 @@ package:
   platform: linux-64
   dependencies:
     libharfbuzz-devel: 15.0.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/harfbuzz-15.0.0-ha770c72_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/harfbuzz-15.0.0-ha770c72_1.conda
   hash:
-    md5: 3bb1373c9a1ca102437ca168e5282cc0
-    sha256: 66e49a0888ad60b69766c8a82a4c5b8be0000b1b0d595710ffaba079fd717e5e
+    md5: e617fe078cf821c3f98067669c57baae
+    sha256: b816ce5ff3ab90f1c6c5887565bcbb84005876c5439a9d75a36d66b67b870785
   category: main
   optional: false
 - name: hpack
@@ -706,17 +706,17 @@ package:
   category: main
   optional: false
 - name: icu
-  version: '78.3'
+  version: '79.1'
   manager: conda
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    libgcc: '>=14'
-    libstdcxx: '>=14'
-  url: https://conda.anaconda.org/conda-forge/linux-64/icu-78.3-py310h44b86e0_2.conda
+    libgcc: '>=15'
+    libstdcxx: '>=15'
+  url: https://conda.anaconda.org/conda-forge/linux-64/icu-79.1-py314hb486520_0.conda
   hash:
-    md5: 72a381cbad04f24b1c2a43ef707f45b4
-    sha256: 9f07834f0c546ab14d885ce0366285f61f44e326c0edd1fc63b8294e113ae432
+    md5: 0be836734696f6476615ef0e97b388a3
+    sha256: 9a339bedff62e63bb949383edc656956abef1f23663c879f7fcb66a004a18ef9
   category: main
   optional: false
 - name: idna
@@ -1070,7 +1070,7 @@ package:
     __glibc: '>=2.17,<3.0.a0'
     cairo: '>=1.18.6,<2.0a0'
     graphite2: '>=1.3.15,<2.0a0'
-    icu: '>=78.3,<79.0a0'
+    icu: '>=79.1,<80.0a0'
     libfreetype: '>=2.14.3'
     libfreetype6: '>=2.14.3'
     libgcc: '>=15'
@@ -1078,10 +1078,10 @@ package:
     libpng: '>=1.6.59,<1.7.0a0'
     libstdcxx: '>=15'
     libzlib: '>=1.3.2,<2.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libharfbuzz-15.0.0-h23af247_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libharfbuzz-15.0.0-h3ca84f1_1.conda
   hash:
-    md5: f8beff45d7ea8bea3c6675a7ef568337
-    sha256: d3190aedc31b449627ba5bdb8423a62fd234623ab99959c0a5a580e4d6ef6420
+    md5: e5d833ba8e8f6c2bf87ed8626c2f21b2
+    sha256: 65c516b48aca400bbff4c6d83090aa60b6fcc9cf2d24c163db90b48db0a61873
   category: main
   optional: false
 - name: libharfbuzz-devel
@@ -1093,7 +1093,7 @@ package:
     cairo: '>=1.18.6,<2.0a0'
     freetype: ''
     graphite2: '>=1.3.15,<2.0a0'
-    icu: '>=78.3,<79.0a0'
+    icu: '>=79.1,<80.0a0'
     libfreetype: '>=2.14.3'
     libfreetype6: '>=2.14.3'
     libgcc: '>=15'
@@ -1102,10 +1102,10 @@ package:
     libpng: '>=1.6.59,<1.7.0a0'
     libstdcxx: '>=15'
     libzlib: '>=1.3.2,<2.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libharfbuzz-devel-15.0.0-h23af247_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libharfbuzz-devel-15.0.0-h3ca84f1_1.conda
   hash:
-    md5: 0ca7e3876bc01ee2c0d3c1e3b0217cc4
-    sha256: 1409a10889a683a95eff4eac5bd2f99631f40c3ef51f7fbd139a90cc3bc36862
+    md5: 6fc89c8d626a6926bba86c889afcdfee
+    sha256: 94c22f77218cff8d05008dc1d71ab179a78c6bcc5e1660ca04320bfab5da6bc1
   category: main
   optional: false
 - name: libiconv
@@ -1225,13 +1225,13 @@ package:
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    icu: '>=78.3,<79.0a0'
+    icu: '>=79.1,<80.0a0'
     libgcc: '>=15'
     libstdcxx: '>=15'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libpsl-0.23.1-hd9e3e90_1.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libpsl-0.23.1-h7fe8442_2.conda
   hash:
-    md5: 77be60417aa572afcb48cbe0f967401d
-    sha256: 09e8effdc89bc5d021349318d32b85594f5b8d8e3ab8f90a85b81f8fe695a566
+    md5: 3a377a6b03bcad2601a820b07fab0c64
+    sha256: 68d48a7cd3e0fc8d7980dd13467d5a2dc937c09f68ccee53b9b0c5a4f569db58
   category: main
   optional: false
 - name: libsanitizer
@@ -1254,13 +1254,13 @@ package:
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    icu: '>=78.3,<79.0a0'
+    icu: '>=79.1,<80.0a0'
     libgcc: '>=15'
     libzlib: '>=1.3.2,<2.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.54.1-h13e7031_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.54.1-hf739112_1.conda
   hash:
-    md5: 8f15f0ec9b69344df5c3bb5cce1751a1
-    sha256: 07b3c98282022f05781122d073f84e944bfb4299946e8457ece3ce6c384ff78e
+    md5: 5c95bcc875a77e89afab63821a504e3f
+    sha256: 4166191b6e9322e8ea124400b7f063aba317ef46d4873f82ef472734f91ddd8c
   category: main
   optional: false
 - name: libssh2

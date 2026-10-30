@@ -200,16 +200,6 @@ conda environment or \`source env.sh\` and skip this step with \`-s 1\`." >&2
         $CYDIR/scripts/generate-conda-lockfiles.sh
         exit_if_last_command_failed
     fi
-    # SYS_GLIBC=$(ldd --version | awk '/ldd/{print $NF}')
-    # DEFAULT_GLIBC=$(grep -i "sysroot_linux-64=" conda-reqs/chipyard-base.yaml | awk -F= '{print $2}')
-    # if [ "$SYS_GLIBC" != "$DEFAULT_GLIBC" ]; then
-    #     # replace the glibc version
-    #     sed -i.bak "s/^\([[:space:]]*-\s*sysroot_linux-64=\).*/\1$SYS_GLIBC/" conda-reqs/chipyard-base.yaml
-    #     $CYDIR/scripts/generate-conda-lockfiles.sh
-    #     exit_if_last_command_failed
-    # fi
-
-
     SYS_GLIBC=$(ldd --version 2>/dev/null | awk '/ldd/{print $NF; exit}')
     DEFAULT_GLIBC=$(sed -n 's/^[[:space:]]*-[[:space:]]*sysroot_linux-64=\([0-9.]*\).*/\1/p' "$CONDA_REQS/chipyard-base.yaml")
     SYSROOT_GLIBC=""
