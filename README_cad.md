@@ -41,7 +41,7 @@ In the following ``git clone`` commands, it is assumed that SSH-keys are configu
     $ cd hammer 
     $ git checkout working/cad_servers
     ```
-2. Install conda environment from ``$HOME`` dir:
+2. Install conda environment from ``$HOME`` dir (You **need** an active internet connection):
     ```bash
     cd ~
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
